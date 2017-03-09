@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+  
+<struts>
+	<package name="login" namespace="/login" extends="struts-default">
+		<action name="loginValidate" class="com.lql.spring.action.LoginAction" method="loginValidate">
+			<result name="error">/views/login.jsp</result>
+			<result name="success">/views/home.jsp</result>  
+		</action>
+		<action name="logout" class="com.lql.spring.action.LoginAction" method="logout">
+			<result name="success">/views/login.jsp</result>
+		</action>
+	</package>
+</struts> 

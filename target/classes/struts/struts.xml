@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+	
+	<struts>
+	<!-- 指定Web应用的默认编码集，相当于调用HttpServletRequest的setCharacterEncoding方法 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	<!-- 设置浏览器是否缓存静态内容，默认值为true，开发阶段最好false -->
+	<constant name="struts.serve.static.browserCache" value="false"/>
+	
+	<!-- 当struts的配置文件修改后，系统是否自动重新加载该文件，默认值为false，开发阶段最好true -->
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	
+	<!--开发模式下设为true，这样可以打印出更详细的错误信息 -->
+	<constant name="struts.devMode" value="false"/>
+	
+	<!-- 动态方法调用,可以解决多个请求对应一个Servlet的问题,默认为true,关闭则设为false. -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+	
+	
+	<!-- 该属性指定需要Struts 2处理的请求后缀，该属性的默认值是action，即所有匹配*.action的请求都由Struts 2处理。    如果用户需要指定多个请求后缀，则多个后缀之间以英文逗号（，）隔开。    -->
+	<!-- 
+	<constant name="struts.action.extension" value="do"/>
+	 -->
+	 
+	 <!-- 引入配置文件 --> 
+	 <include file="struts/com-travelsky-example-spring-login.xml"/> 
+	</struts>
